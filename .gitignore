@@ -29,6 +29,14 @@ ExportedObj/
 # Unity3D Generated File On Crash Reports
 sysinfo.txt
 
+# Baked File
+*.asset
+
+
 # Builds
 *.apk
 *.unitypackage
+
+
+# Others
+*.tar
