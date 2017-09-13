@@ -5,6 +5,7 @@ using UnityEngine;
 public class Attacking : StateMachineBehaviour
 {
 	private bool exited = false;
+	public float attackingStateTime = 0.7f;
 
 	public override void OnStateEnter(Animator animator, AnimatorStateInfo animatorStateInfo, int layerIndex)
 	{
@@ -13,7 +14,7 @@ public class Attacking : StateMachineBehaviour
 
 	public override void OnStateUpdate(Animator animator, AnimatorStateInfo animatorStateInfo, int layerIndex)
 	{
-		if (!exited && animator.GetBool("Attacking") && animatorStateInfo.normalizedTime >= 0.7f)
+		if (!exited && animator.GetBool("Attacking") && animatorStateInfo.normalizedTime >= attackingStateTime)
 		{
 			exited = true;
 			animator.SetTrigger("StateExit" + layerIndex.ToString());
