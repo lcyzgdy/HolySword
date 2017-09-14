@@ -531,6 +531,28 @@ ModelImporter:
     4300054: Point_LP_sword_004
     4300056: Point_RP_luokuang
     4300058: Point_RP_sword_002
+    6400000: Point_HAT_hat
+    6400002: Point_LC_sword_002
+    6400004: Point_LH_fist_002
+    6400006: Point_LH_fist_003
+    6400008: Point_LH_sword_001
+    6400010: Point_Long_spear_003
+    6400012: Point_Long_wand_003
+    6400014: Point_LP_luo
+    6400016: Point_LP_sword_004
+    6400018: Point_RC_sword_003
+    6400020: Point_RH_fist_002
+    6400022: Point_RH_fist_003
+    6400024: Point_RH_spear_003
+    6400026: Point_RH_sword_003
+    6400028: Point_RH_wand_003
+    6400030: Point_RP_luokuang
+    6400032: Point_RP_sword_002
+    6400034: Point_Spine2_hat
+    6400036: Point_Spine2_luo
+    6400038: Point_Spine_luo
+    6400040: "\u6807\u51C6\u7537\u65B0\u624B\u88C5_face"
+    6400042: "\u6807\u51C6\u7537\u65B0\u624B\u88C5_faceNub"
     7400000: Take 001
     9500000: //RootNode
     13700000: "\u6807\u51C6\u7537\u65B0\u624B\u88C5_belt"
