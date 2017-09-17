@@ -9,10 +9,16 @@ public class PlayerControl : MonoBehaviour
 	private float maxSpeed;
 	//private Vector3 direction;
 	private new Rigidbody rigidbody;
+	private bool isAttacking;
+	private float cancelTime;
+	private PlayerAnimControl animControl;
 	// Use this for initialization
 	void Start()
 	{
 		rigidbody = GetComponent<Rigidbody>();
+		animControl = GetComponent<PlayerAnimControl>();
+		isAttacking = false;
+		cancelTime = 0.5f;
 	}
 
 	// Update is called once per frame
@@ -23,7 +29,7 @@ public class PlayerControl : MonoBehaviour
 		float y = Camera.main.transform.rotation.eulerAngles.y;
 		float vSpeed = velocity.y;
 		transform.rotation = Quaternion.Euler(0f, y, 0f);
-		if (Input.GetKey(KeyCode.W))
+		if (!isAttacking && Input.GetKey(KeyCode.W))
 		{
 			var direction = (transform.position - Camera.main.transform.position);
 			direction.y = 0f;
@@ -37,5 +43,21 @@ public class PlayerControl : MonoBehaviour
 		{
 			rigidbody.velocity = new Vector3(0, vSpeed, 0);
 		}
+
+		if (Input.GetMouseButtonDown(0))
+		{
+			isAttacking = true;
+			cancelTime = 0.5f;
+		}
+
+		cancelTime -= Time.deltaTime;
+		if (cancelTime <= 0f)
+		{
+			isAttacking = false;
+		}
+		print(GameObject.Find("Sphere").transform.position);
+		Debug.DrawRay(GameObject.Find("Sphere").transform.position, 
+			GameObject.Find("Sphere").transform.rotation.eulerAngles, 
+			Color.red);
 	}
 }

@@ -20,10 +20,16 @@ public class PlayerAnimControl : MonoBehaviour
 	void Update()
 	{
 		//isAttacking = false;
-
-		if (Input.GetKey(KeyCode.W))
+		if (!isAttacking)
 		{
-			isRunning = true;
+			if (Input.GetKey(KeyCode.W))
+			{
+				isRunning = true;
+			}
+			else
+			{
+				isRunning = false;
+			}
 		}
 		else
 		{
