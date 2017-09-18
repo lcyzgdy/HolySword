@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,12 +13,35 @@ public class PlayerControl : MonoBehaviour
 	private bool isAttacking;
 	private float cancelTime;
 	private PlayerAnimControl animControl;
+	[SerializeField] private Transform hand;
+	[SerializeField] private Transform sword;
+	[SerializeField] private LayerMask layerMask;
+	private bool isPrepared;
+	private bool canMove;
+	private bool isRunning;
+
+	public bool CanMove
+	{
+		get
+		{
+			return canMove;
+		}
+
+		set
+		{
+			canMove = value;
+		}
+	}
+
 	// Use this for initialization
 	void Start()
 	{
 		rigidbody = GetComponent<Rigidbody>();
 		animControl = GetComponent<PlayerAnimControl>();
 		isAttacking = false;
+		isPrepared = true;
+		canMove = true;
+		isRunning = false;
 		cancelTime = 0.5f;
 	}
 
@@ -28,8 +52,17 @@ public class PlayerControl : MonoBehaviour
 		//print(velocity);
 		float y = Camera.main.transform.rotation.eulerAngles.y;
 		float vSpeed = velocity.y;
+
 		transform.rotation = Quaternion.Euler(0f, y, 0f);
-		if (!isAttacking && Input.GetKey(KeyCode.W))
+		cancelTime -= Time.deltaTime;
+		isRunning = false;
+
+		if (cancelTime <= 0f)
+		{
+			isAttacking = false;
+		}
+
+		if (!isAttacking && canMove && Input.GetKey(KeyCode.W))
 		{
 			var direction = (transform.position - Camera.main.transform.position);
 			direction.y = 0f;
@@ -38,26 +71,60 @@ public class PlayerControl : MonoBehaviour
 			direction *= runSpeed;
 			direction.y = vSpeed;
 			rigidbody.velocity = direction;// new Vector3(0, vSpeed, 0);
+			isRunning = true;
 		}
 		else
 		{
 			rigidbody.velocity = new Vector3(0, vSpeed, 0);
+			isRunning = false;
 		}
-
-		if (Input.GetMouseButtonDown(0))
+		if (canMove && Input.GetMouseButtonDown(0) && isPrepared)
 		{
 			isAttacking = true;
 			cancelTime = 0.5f;
 		}
-
-		cancelTime -= Time.deltaTime;
-		if (cancelTime <= 0f)
+		if (Input.GetKeyDown(KeyCode.X))
 		{
-			isAttacking = false;
+			if (canMove && !isRunning)
+			{
+				isAttacking = false;
+				isPrepared = !isPrepared;
+				//canMove = false;
+			}
+			//if (isPrepared)
+			//{
+			//	ShowSword();
+			//}
+			//else
+			//{
+			//	HideSword();
+			//}
 		}
-		print(GameObject.Find("Sphere").transform.position);
-		Debug.DrawRay(GameObject.Find("Sphere").transform.position, 
-			GameObject.Find("Sphere").transform.rotation.eulerAngles, 
-			Color.red);
+
+		if (isAttacking)
+		{
+			NormalAttack(sword.position - hand.position);
+		}
+
+		//print(canMove);
+	}
+
+	private void NormalAttack(Vector3 direction)
+	{
+		Ray ray = new Ray(hand.position, direction);
+		foreach (var item in Physics.RaycastAll(ray, direction.sqrMagnitude * 1.2f, layerMask))
+		{
+			print(item.transform.name);
+		}
+	}
+
+	public void ShowSword()
+	{
+		hand.parent.GetComponent<MeshRenderer>().enabled = true;
+	}
+
+	public void HideSword()
+	{
+		hand.parent.GetComponent<MeshRenderer>().enabled = false;
 	}
 }
