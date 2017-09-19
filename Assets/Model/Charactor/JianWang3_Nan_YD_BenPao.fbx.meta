@@ -1,0 +1,628 @@
+fileFormatVersion: 2
+guid: 420d4e4b7cf426b4591fecade9fd4ea6
+timeCreated: 1505737797
+licenseType: Free
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: "1111\u5BF9\u4F4D\u5668L"
+    100002: "1111\u5BF9\u4F4D\u5668R"
+    100004: ADD_L101
+    100006: ADD_L102
+    100008: ADD_L103
+    100010: ADD_L201
+    100012: ADD_L202
+    100014: ADD_L203
+    100016: ADD_L301
+    100018: ADD_L302
+    100020: ADD_L303
+    100022: ADD_L401
+    100024: ADD_L402
+    100026: ADD_L403
+    100028: ADD_M101
+    100030: ADD_M102
+    100032: ADD_M103
+    100034: ADD_R101
+    100036: ADD_R102
+    100038: ADD_R103
+    100040: ADD_R201
+    100042: ADD_R202
+    100044: ADD_R203
+    100046: ADD_R301
+    100048: ADD_R302
+    100050: ADD_R303
+    100052: ADD_R401
+    100054: ADD_R402
+    100056: ADD_R403
+    100058: B_Hat
+    100060: B_LC
+    100062: B_LH
+    100064: B_Long
+    100066: B_LP
+    100068: B_RC
+    100070: B_RH
+    100072: B_RP
+    100074: B_Spine
+    100076: B_Spine2
+    100078: Bip01
+    100080: Bip01 Footsteps
+    100082: Bip01 Head
+    100084: Bip01 HeadNub
+    100086: Bip01 L Calf
+    100088: Bip01 L Clavicle
+    100090: Bip01 L Finger0
+    100092: Bip01 L Finger01
+    100094: Bip01 L Finger02
+    100096: Bip01 L Finger0Nub
+    100098: Bip01 L Finger1
+    100100: Bip01 L Finger11
+    100102: Bip01 L Finger12
+    100104: Bip01 L Finger1Nub
+    100106: Bip01 L Finger2
+    100108: Bip01 L Finger21
+    100110: Bip01 L Finger22
+    100112: Bip01 L Finger2Nub
+    100114: Bip01 L Finger3
+    100116: Bip01 L Finger31
+    100118: Bip01 L Finger32
+    100120: Bip01 L Finger3Nub
+    100122: Bip01 L Finger4
+    100124: Bip01 L Finger41
+    100126: Bip01 L Finger42
+    100128: Bip01 L Finger4Nub
+    100130: Bip01 L Foot
+    100132: Bip01 L Forearm
+    100134: Bip01 L ForeTwist
+    100136: Bip01 L ForeTwist1
+    100138: Bip01 L Hand
+    100140: Bip01 L Thigh
+    100142: Bip01 L Toe0
+    100144: Bip01 L Toe0Nub
+    100146: Bip01 L UpperArm
+    100148: Bip01 Neck
+    100150: Bip01 Neck1
+    100152: Bip01 Pelvis
+    100154: Bip01 R Calf
+    100156: Bip01 R Clavicle
+    100158: Bip01 R Finger0
+    100160: Bip01 R Finger01
+    100162: Bip01 R Finger02
+    100164: Bip01 R Finger0Nub
+    100166: Bip01 R Finger1
+    100168: Bip01 R Finger11
+    100170: Bip01 R Finger12
+    100172: Bip01 R Finger1Nub
+    100174: Bip01 R Finger2
+    100176: Bip01 R Finger21
+    100178: Bip01 R Finger22
+    100180: Bip01 R Finger2Nub
+    100182: Bip01 R Finger3
+    100184: Bip01 R Finger31
+    100186: Bip01 R Finger32
+    100188: Bip01 R Finger3Nub
+    100190: Bip01 R Finger4
+    100192: Bip01 R Finger41
+    100194: Bip01 R Finger42
+    100196: Bip01 R Finger4Nub
+    100198: Bip01 R Foot
+    100200: Bip01 R Forearm
+    100202: Bip01 R ForeTwist
+    100204: Bip01 R ForeTwist1
+    100206: Bip01 R Hand
+    100208: Bip01 R Thigh
+    100210: Bip01 R Toe0
+    100212: Bip01 R Toe0Nub
+    100214: Bip01 R UpperArm
+    100216: Bip01 Spine
+    100218: Bip01 Spine1
+    100220: Bip01 Spine2
+    100222: Bone02Nub
+    100224: Bone03Nub
+    100226: Bone05Nub
+    100228: Bone06Nub
+    100230: Bone08Nub
+    100232: Bone09Nub
+    100234: Bone10Nub
+    100236: Bone19Nub
+    100238: Bone20Nub
+    100240: Bone22Nub
+    100242: Bone23Nub
+    100244: Bone25Nub
+    100246: Bone26Nub
+    100248: Bone33Nub
+    100250: Bone34Nub
+    100252: Bone35Nub
+    100254: Bone36Nub
+    100256: Bone37Nub
+    100258: Bone38Nub
+    100260: Bone_L_ArmTwist
+    100262: Bone_L_ThighTwist
+    100264: Bone_R_ArmTwist
+    100266: Bone_R_ThighTwist
+    100268: Bone_shd_L
+    100270: Bone_shd_R
+    100272: IK Chain01
+    100274: IK Chain02
+    100276: IK Chain03
+    100278: IK Chain04
+    100280: IK Chain05
+    100282: IK Chain06
+    100284: IK Chain07
+    100286: IK Chain08
+    100288: IK Chain09
+    100290: IK Chain10
+    100292: //RootNode
+    100294: "Point \u62F3\u5957\u5BF9\u4F4D\u5668L"
+    100296: "Point \u62F3\u5957\u5BF9\u4F4D\u5668R"
+    100298: Point01
+    100300: Point02
+    100302: Point03
+    100304: Point04
+    100306: Point05
+    100308: Point06
+    100310: Point07
+    100312: Point08
+    100314: Point09
+    100316: Point10
+    100318: Point11
+    100320: Point12
+    100322: Point13
+    100324: Point14
+    100326: Point15
+    100328: Point_HAT
+    100330: Point_HAT_hat
+    100332: Point_LC
+    100334: Point_LC_sword_002
+    100336: Point_LH
+    100338: Point_LH_fist_002
+    100340: Point_LH_fist_003
+    100342: Point_LH_sword_001
+    100344: Point_Long
+    100346: Point_Long_spear_003
+    100348: Point_Long_wand_003
+    100350: Point_LP
+    100352: Point_LP_luo
+    100354: Point_LP_sword_004
+    100356: Point_RC
+    100358: Point_RC_sword_003
+    100360: Point_RH
+    100362: Point_RH_fist_002
+    100364: Point_RH_fist_003
+    100366: Point_RH_spear_003
+    100368: Point_RH_sword_003
+    100370: Point_RH_wand_003
+    100372: Point_RP
+    100374: Point_RP_luokuang
+    100376: Point_RP_sword_002
+    100378: Point_Spine
+    100380: Point_Spine2
+    100382: Point_Spine2_hat
+    100384: Point_Spine2_luo
+    100386: Point_Spine_luo
+    100388: S_Face
+    100390: S_fxmid
+    100392: S_fxtop
+    100394: S_Hat
+    100396: S_LC
+    100398: S_LH
+    100400: S_Long
+    100402: S_LP
+    100404: S_RC
+    100406: S_RH
+    100408: S_RP
+    100410: S_Spine
+    100412: S_Spine2
+    100414: "\u6807\u51C6\u7537\u65B0\u624B\u88C5_belt"
+    100416: "\u6807\u51C6\u7537\u65B0\u624B\u88C5_body"
+    100418: "\u6807\u51C6\u7537\u65B0\u624B\u88C5_face"
+    100420: "\u6807\u51C6\u7537\u65B0\u624B\u88C5_faceNub"
+    100422: "\u6807\u51C6\u7537\u65B0\u624B\u88C5_hand"
+    100424: "\u6807\u51C6\u7537\u65B0\u624B\u88C5_head"
+    100426: "\u6807\u51C6\u7537\u65B0\u624B\u88C5_leg"
+    100428: "\u6807\u51C6\u7537\u65B0\u624B\u88C5_shoulder"
+    100430: "\u88D9\u6446A01"
+    100432: "\u88D9\u6446B03"
+    400000: "1111\u5BF9\u4F4D\u5668L"
+    400002: "1111\u5BF9\u4F4D\u5668R"
+    400004: ADD_L101
+    400006: ADD_L102
+    400008: ADD_L103
+    400010: ADD_L201
+    400012: ADD_L202
+    400014: ADD_L203
+    400016: ADD_L301
+    400018: ADD_L302
+    400020: ADD_L303
+    400022: ADD_L401
+    400024: ADD_L402
+    400026: ADD_L403
+    400028: ADD_M101
+    400030: ADD_M102
+    400032: ADD_M103
+    400034: ADD_R101
+    400036: ADD_R102
+    400038: ADD_R103
+    400040: ADD_R201
+    400042: ADD_R202
+    400044: ADD_R203
+    400046: ADD_R301
+    400048: ADD_R302
+    400050: ADD_R303
+    400052: ADD_R401
+    400054: ADD_R402
+    400056: ADD_R403
+    400058: B_Hat
+    400060: B_LC
+    400062: B_LH
+    400064: B_Long
+    400066: B_LP
+    400068: B_RC
+    400070: B_RH
+    400072: B_RP
+    400074: B_Spine
+    400076: B_Spine2
+    400078: Bip01
+    400080: Bip01 Footsteps
+    400082: Bip01 Head
+    400084: Bip01 HeadNub
+    400086: Bip01 L Calf
+    400088: Bip01 L Clavicle
+    400090: Bip01 L Finger0
+    400092: Bip01 L Finger01
+    400094: Bip01 L Finger02
+    400096: Bip01 L Finger0Nub
+    400098: Bip01 L Finger1
+    400100: Bip01 L Finger11
+    400102: Bip01 L Finger12
+    400104: Bip01 L Finger1Nub
+    400106: Bip01 L Finger2
+    400108: Bip01 L Finger21
+    400110: Bip01 L Finger22
+    400112: Bip01 L Finger2Nub
+    400114: Bip01 L Finger3
+    400116: Bip01 L Finger31
+    400118: Bip01 L Finger32
+    400120: Bip01 L Finger3Nub
+    400122: Bip01 L Finger4
+    400124: Bip01 L Finger41
+    400126: Bip01 L Finger42
+    400128: Bip01 L Finger4Nub
+    400130: Bip01 L Foot
+    400132: Bip01 L Forearm
+    400134: Bip01 L ForeTwist
+    400136: Bip01 L ForeTwist1
+    400138: Bip01 L Hand
+    400140: Bip01 L Thigh
+    400142: Bip01 L Toe0
+    400144: Bip01 L Toe0Nub
+    400146: Bip01 L UpperArm
+    400148: Bip01 Neck
+    400150: Bip01 Neck1
+    400152: Bip01 Pelvis
+    400154: Bip01 R Calf
+    400156: Bip01 R Clavicle
+    400158: Bip01 R Finger0
+    400160: Bip01 R Finger01
+    400162: Bip01 R Finger02
+    400164: Bip01 R Finger0Nub
+    400166: Bip01 R Finger1
+    400168: Bip01 R Finger11
+    400170: Bip01 R Finger12
+    400172: Bip01 R Finger1Nub
+    400174: Bip01 R Finger2
+    400176: Bip01 R Finger21
+    400178: Bip01 R Finger22
+    400180: Bip01 R Finger2Nub
+    400182: Bip01 R Finger3
+    400184: Bip01 R Finger31
+    400186: Bip01 R Finger32
+    400188: Bip01 R Finger3Nub
+    400190: Bip01 R Finger4
+    400192: Bip01 R Finger41
+    400194: Bip01 R Finger42
+    400196: Bip01 R Finger4Nub
+    400198: Bip01 R Foot
+    400200: Bip01 R Forearm
+    400202: Bip01 R ForeTwist
+    400204: Bip01 R ForeTwist1
+    400206: Bip01 R Hand
+    400208: Bip01 R Thigh
+    400210: Bip01 R Toe0
+    400212: Bip01 R Toe0Nub
+    400214: Bip01 R UpperArm
+    400216: Bip01 Spine
+    400218: Bip01 Spine1
+    400220: Bip01 Spine2
+    400222: Bone02Nub
+    400224: Bone03Nub
+    400226: Bone05Nub
+    400228: Bone06Nub
+    400230: Bone08Nub
+    400232: Bone09Nub
+    400234: Bone10Nub
+    400236: Bone19Nub
+    400238: Bone20Nub
+    400240: Bone22Nub
+    400242: Bone23Nub
+    400244: Bone25Nub
+    400246: Bone26Nub
+    400248: Bone33Nub
+    400250: Bone34Nub
+    400252: Bone35Nub
+    400254: Bone36Nub
+    400256: Bone37Nub
+    400258: Bone38Nub
+    400260: Bone_L_ArmTwist
+    400262: Bone_L_ThighTwist
+    400264: Bone_R_ArmTwist
+    400266: Bone_R_ThighTwist
+    400268: Bone_shd_L
+    400270: Bone_shd_R
+    400272: IK Chain01
+    400274: IK Chain02
+    400276: IK Chain03
+    400278: IK Chain04
+    400280: IK Chain05
+    400282: IK Chain06
+    400284: IK Chain07
+    400286: IK Chain08
+    400288: IK Chain09
+    400290: IK Chain10
+    400292: //RootNode
+    400294: "Point \u62F3\u5957\u5BF9\u4F4D\u5668L"
+    400296: "Point \u62F3\u5957\u5BF9\u4F4D\u5668R"
+    400298: Point01
+    400300: Point02
+    400302: Point03
+    400304: Point04
+    400306: Point05
+    400308: Point06
+    400310: Point07
+    400312: Point08
+    400314: Point09
+    400316: Point10
+    400318: Point11
+    400320: Point12
+    400322: Point13
+    400324: Point14
+    400326: Point15
+    400328: Point_HAT
+    400330: Point_HAT_hat
+    400332: Point_LC
+    400334: Point_LC_sword_002
+    400336: Point_LH
+    400338: Point_LH_fist_002
+    400340: Point_LH_fist_003
+    400342: Point_LH_sword_001
+    400344: Point_Long
+    400346: Point_Long_spear_003
+    400348: Point_Long_wand_003
+    400350: Point_LP
+    400352: Point_LP_luo
+    400354: Point_LP_sword_004
+    400356: Point_RC
+    400358: Point_RC_sword_003
+    400360: Point_RH
+    400362: Point_RH_fist_002
+    400364: Point_RH_fist_003
+    400366: Point_RH_spear_003
+    400368: Point_RH_sword_003
+    400370: Point_RH_wand_003
+    400372: Point_RP
+    400374: Point_RP_luokuang
+    400376: Point_RP_sword_002
+    400378: Point_Spine
+    400380: Point_Spine2
+    400382: Point_Spine2_hat
+    400384: Point_Spine2_luo
+    400386: Point_Spine_luo
+    400388: S_Face
+    400390: S_fxmid
+    400392: S_fxtop
+    400394: S_Hat
+    400396: S_LC
+    400398: S_LH
+    400400: S_Long
+    400402: S_LP
+    400404: S_RC
+    400406: S_RH
+    400408: S_RP
+    400410: S_Spine
+    400412: S_Spine2
+    400414: "\u6807\u51C6\u7537\u65B0\u624B\u88C5_belt"
+    400416: "\u6807\u51C6\u7537\u65B0\u624B\u88C5_body"
+    400418: "\u6807\u51C6\u7537\u65B0\u624B\u88C5_face"
+    400420: "\u6807\u51C6\u7537\u65B0\u624B\u88C5_faceNub"
+    400422: "\u6807\u51C6\u7537\u65B0\u624B\u88C5_hand"
+    400424: "\u6807\u51C6\u7537\u65B0\u624B\u88C5_head"
+    400426: "\u6807\u51C6\u7537\u65B0\u624B\u88C5_leg"
+    400428: "\u6807\u51C6\u7537\u65B0\u624B\u88C5_shoulder"
+    400430: "\u88D9\u6446A01"
+    400432: "\u88D9\u6446B03"
+    2300000: Point_HAT_hat
+    2300002: Point_LC_sword_002
+    2300004: Point_LH_fist_002
+    2300006: Point_LH_fist_003
+    2300008: Point_LH_sword_001
+    2300010: Point_Long_spear_003
+    2300012: Point_Long_wand_003
+    2300014: Point_LP_luo
+    2300016: Point_LP_sword_004
+    2300018: Point_RC_sword_003
+    2300020: Point_RH_fist_002
+    2300022: Point_RH_fist_003
+    2300024: Point_RH_spear_003
+    2300026: Point_RH_sword_003
+    2300028: Point_RH_wand_003
+    2300030: Point_RP_luokuang
+    2300032: Point_RP_sword_002
+    2300034: Point_Spine2_hat
+    2300036: Point_Spine2_luo
+    2300038: Point_Spine_luo
+    2300040: "\u6807\u51C6\u7537\u65B0\u624B\u88C5_face"
+    2300042: "\u6807\u51C6\u7537\u65B0\u624B\u88C5_faceNub"
+    3300000: Point_HAT_hat
+    3300002: Point_LC_sword_002
+    3300004: Point_LH_fist_002
+    3300006: Point_LH_fist_003
+    3300008: Point_LH_sword_001
+    3300010: Point_Long_spear_003
+    3300012: Point_Long_wand_003
+    3300014: Point_LP_luo
+    3300016: Point_LP_sword_004
+    3300018: Point_RC_sword_003
+    3300020: Point_RH_fist_002
+    3300022: Point_RH_fist_003
+    3300024: Point_RH_spear_003
+    3300026: Point_RH_sword_003
+    3300028: Point_RH_wand_003
+    3300030: Point_RP_luokuang
+    3300032: Point_RP_sword_002
+    3300034: Point_Spine2_hat
+    3300036: Point_Spine2_luo
+    3300038: Point_Spine_luo
+    3300040: "\u6807\u51C6\u7537\u65B0\u624B\u88C5_face"
+    3300042: "\u6807\u51C6\u7537\u65B0\u624B\u88C5_faceNub"
+    4300000: "\u6807\u51C6\u7537\u65B0\u624B\u88C5_leg"
+    4300002: "\u6807\u51C6\u7537\u65B0\u624B\u88C5_head"
+    4300004: "\u6807\u51C6\u7537\u65B0\u624B\u88C5_belt"
+    4300006: "\u6807\u51C6\u7537\u65B0\u624B\u88C5_shoulder"
+    4300008: "\u6807\u51C6\u7537\u65B0\u624B\u88C5_faceNub"
+    4300010: Point_LH_sword_001
+    4300012: Point_LH_fist_002
+    4300014: Point_LH_fist_003
+    4300016: Point_RH_sword_003
+    4300018: Point_RH_fist_002
+    4300020: Point_RH_fist_003
+    4300022: Point_RH_wand_003
+    4300024: Point_RH_spear_003
+    4300026: "\u6807\u51C6\u7537\u65B0\u624B\u88C5_body"
+    4300028: "\u6807\u51C6\u7537\u65B0\u624B\u88C5_hand"
+    4300030: "\u88D9\u6446B03"
+    4300032: "\u88D9\u6446A01"
+    4300034: "\u6807\u51C6\u7537\u65B0\u624B\u88C5_face"
+    4300036: Point_HAT_hat
+    4300038: Point_LC_sword_002
+    4300040: Point_RC_sword_003
+    4300042: Point_Spine2_hat
+    4300044: Point_Spine2_luo
+    4300046: Point_Long_wand_003
+    4300048: Point_Long_spear_003
+    4300050: Point_Spine_luo
+    4300052: Point_LP_luo
+    4300054: Point_LP_sword_004
+    4300056: Point_RP_luokuang
+    4300058: Point_RP_sword_002
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: "\u6807\u51C6\u7537\u65B0\u624B\u88C5_belt"
+    13700002: "\u6807\u51C6\u7537\u65B0\u624B\u88C5_body"
+    13700004: "\u6807\u51C6\u7537\u65B0\u624B\u88C5_hand"
+    13700006: "\u6807\u51C6\u7537\u65B0\u624B\u88C5_head"
+    13700008: "\u6807\u51C6\u7537\u65B0\u624B\u88C5_leg"
+    13700010: "\u6807\u51C6\u7537\u65B0\u624B\u88C5_shoulder"
+    13700012: "\u88D9\u6446A01"
+    13700014: "\u88D9\u6446B03"
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 28
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
