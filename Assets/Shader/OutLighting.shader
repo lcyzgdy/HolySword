@@ -22,7 +22,7 @@ Shader "Custom/OutLightting"
             Name "PlanetBase"
             Tags {"LightMode" = "Always"}
             Cull Back
-           
+
             CGPROGRAM
                 #pragma vertex vert
                 #pragma fragment frag

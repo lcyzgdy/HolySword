@@ -4,43 +4,42 @@ Shader "Custom/MyStandard"
 {
 	Properties
 	{
-		_Color("Color", Color) = (1,1,1,1)
-		_MainTex("Albedo", 2D) = "white" {}
-		
-		_Cutoff("Alpha Cutoff", Range(0.0, 1.0)) = 0.5
+		_Color("Color", Color) = (1,1,1,1) //主颜色
+		_MainTex("Albedo", 2D) = "white" {} //主纹理
+		_Cutoff("Alpha Cutoff", Range(0.0, 1.0)) = 0.5 //Alpha剔除值
+		_Glossiness("Smoothness", Range(0.0, 1.0)) = 0.2 //平滑、光泽度
 
-		_Glossiness("Smoothness", Range(0.0, 1.0)) = 0.2
-		_GlossMapScale("Smoothness Scale", Range(0.0, 1.0)) = 1.0
+		_GlossMapScale("Smoothness Scale", Range(0.0, 1.0)) = 1.0 
 		[Enum(Metallic Alpha,0,Albedo Alpha,1)] _SmoothnessTextureChannel ("Smoothness texture channel", Float) = 0
 
-		[Gamma] _Metallic("Metallic", Range(0.0, 1.0)) = 0.0
-		_MetallicGlossMap("Metallic", 2D) = "white" {}
+		[Gamma] _Metallic("Metallic", Range(0.0, 1.0)) = 0.0 //金属性
+		_MetallicGlossMap("Metallic", 2D) = "white" {} //金属光泽纹理图
 
 		[ToggleOff] _SpecularHighlights("Specular Highlights", Float) = 1.0
 		[ToggleOff] _GlossyReflections("Glossy Reflections", Float) = 1.0
 
-		_BumpScale("Scale", Float) = 1.0
-		_BumpMap("Normal Map", 2D) = "bump" {}
+		_BumpScale("Scale", Float) = 1.0 //凹凸的尺度
+		_BumpMap("Normal Map", 2D) = "bump" {} //法线贴图
 
-		_Parallax ("Height Scale", Range (0.005, 0.08)) = 0.02
-		_ParallaxMap ("Height Map", 2D) = "black" {}
+		_Parallax ("Height Scale", Range (0.005, 0.08)) = 0.02 //高度缩放尺度
+		_ParallaxMap ("Height Map", 2D) = "black" {} //高度纹理图
 
-		_OcclusionStrength("Strength", Range(0.0, 1.0)) = 1.0
-		_OcclusionMap("Occlusion", 2D) = "white" {}
-
-		_EmissionColor("Color", Color) = (0,0,0)
-		_EmissionMap("Emission", 2D) = "white" {}
+		_OcclusionStrength("Strength", Range(0.0, 1.0)) = 1.0 //遮挡强度
+		_OcclusionMap("Occlusion", 2D) = "white" {} //遮挡纹理图
 		
-		_DetailMask("Detail Mask", 2D) = "white" {}
+		_EmissionColor("Color", Color) = (0,0,0) //自发光颜色
+		_EmissionMap("Emission", 2D) = "white" {} //自发光纹理图
+		
+		_DetailMask("Detail Mask", 2D) = "white" {} //细节掩膜图
 
-		_DetailAlbedoMap("Detail Albedo x2", 2D) = "grey" {}
-		_DetailNormalMapScale("Scale", Float) = 1.0
-		_DetailNormalMap("Normal Map", 2D) = "bump" {}
+		_DetailAlbedoMap("Detail Albedo x2", 2D) = "grey" {} //细节纹理图
+		_DetailNormalMapScale("Scale", Float) = 1.0 //细节法线贴图尺度
+		_DetailNormalMap("Normal Map", 2D) = "bump" {} //细节法线贴图
 
-		[Enum(UV0,0,UV1,1)] _UVSec ("UV Set for secondary textures", Float) = 0
+		[Enum(UV0, 0, UV1, 1)] _UVSec ("UV Set for secondary textures", Float) = 0 //二级纹理的UV设置
 
 
-		// Blending state
+		// 混合状态
 		[HideInInspector] _Mode ("__mode", Float) = 0.0
 		[HideInInspector] _SrcBlend ("__src", Float) = 1.0
 		[HideInInspector] _DstBlend ("__dst", Float) = 0.0
@@ -48,21 +47,30 @@ Shader "Custom/MyStandard"
 	}
 
 	CGINCLUDE
-		#define UNITY_SETUP_BRDF_INPUT MetallicSetup
+		// BRDF(双向反射分布函数)有关的一个宏
+		#define UNITY_SETUP_BRDF_INPUT MetallicSetup 
 	ENDCG
 
 	SubShader
 	{
-		Tags { "RenderType"="Opaque" "PerformanceChecks"="False" }
+		// 渲染类型设置：不透明
+		Tags 
+		{
+			"RenderType"="Opaque"
+			"PerformanceChecks"="False" 
+		}
 		LOD 300
 		Cull Off
 
 		// ------------------------------------------------------------------
-		// 正向基础渲染通道（Base forward pass）处理方向光，自发光，光照贴图等 
+		//  Base forward pass (directional light, emission, lightmaps, ...)
 		Pass
 		{
 			Name "FORWARD" 
-			Tags { "LightMode" = "ForwardBase" }
+			Tags 
+			{ 
+				"LightMode" = "ForwardBase" 
+			}
 
 			Blend [_SrcBlend] [_DstBlend]
 			ZWrite [_ZWrite]
@@ -71,8 +79,7 @@ Shader "Custom/MyStandard"
 
 			CGPROGRAM
 			#pragma target 3.0
-			//不使用GLES
-			//#pragma exclude_renderers gles 
+
 			// -------------------------------------
 
 			#pragma shader_feature _NORMALMAP
@@ -216,5 +223,5 @@ Shader "Custom/MyStandard"
 	}
 
 	FallBack "VertexLit"
-	CustomEditor "StandardShaderGUI"
+	//CustomEditor "StandardShaderGUI"
 }
