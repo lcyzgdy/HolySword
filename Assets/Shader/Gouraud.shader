@@ -1,11 +1,9 @@
-﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
-
-Shader "Custom/Test/GouraudShading"
+﻿Shader "Custom/Test/Gouraud"
 {
 	Properties
     {
         _MainColor ("Color", Color) = (1, 1, 1, 1)
-		//_MainTex ("Main Tex", 2D) = "white"
+		_MainTex ("Main Tex", 2D) = "white"
     }
     SubShader
     {
@@ -55,30 +53,34 @@ Shader "Custom/Test/GouraudShading"
             };
 
             float4 _MainColor;
-			//sampler2D _MainTex;
-			//float4 _MainTex_ST;
+			sampler2D _MainTex;
+			float4 _MainTex_ST;
             
             //Gouraud Shading的重点就是光照是在vert函数中计算
 			v2f vert (appdata v)
 			{
 				v2f o;
 				o.pos = UnityObjectToClipPos(v.pos);
-				//o.uv = TRANSFORM_TEX(v.uv, _MainTex);
+				o.uv = TRANSFORM_TEX(v.uv, _MainTex);
 				TRANSFER_SHADOW(o);
+				float3 worldPos = UnityObjectToClipPos(v.pos);
 				float3 ambient0 = UNITY_LIGHTMODEL_AMBIENT.rag;
 				float3 normalDir = normalize(mul(UNITY_MATRIX_M, v.normal));
-				float3 lightDir = normalize(_WorldSpaceLightPos0.xyz);
+				float3 lightDir = normalize(_WorldSpaceLightPos0.xyz - worldPos);
 				float3 diffuse0 = _LightColor0.rgb * max(dot(normalDir, lightDir), 0);
-				o.col = diffuse0 + ambient0;
+				float dist = distance(_WorldSpaceLightPos0, worldPos);
+				float atten = 2 / pow(dist, 2);
+				o.col = diffuse0 * ambient0;
 				//o.col = v.normal;
 				return o;
 			}
             
             fixed4 frag (v2f i) : SV_Target
 			{
-				fixed4 col = _MainColor;
+				fixed4 col = _MainColor * tex2D(_MainTex, i.uv);
+				UNITY_APPLY_FOG(i.fogCoord, col);
 				col *= fixed4(i.col, 1);
-				return col* SHADOW_ATTENUATION(i);
+				return col ;//* SHADOW_ATTENUATION(i);
             }
             ENDCG
         }
@@ -103,7 +105,7 @@ Shader "Custom/Test/GouraudShading"
 			ENDCG
 		}
 
-		Pass
+		/*Pass
         {
             Name "ShadowCaster"
             Tags
@@ -129,7 +131,7 @@ Shader "Custom/Test/GouraudShading"
                 #include "UnityStandardShadow.cginc"
 
             ENDCG
-        }
+        }*/
 
 		Pass
 		{
