@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: LightingTest
-  m_Shader: {fileID: 4800000, guid: edf2a6d788915534a86056d3cabe6d48, type: 3}
+  m_Shader: {fileID: 4800000, guid: 32ccc521078233e4f9ce0de27b266725, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -72,6 +72,7 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
+    - _Shininess: 6
     - _Size: 0.1
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1

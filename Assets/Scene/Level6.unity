@@ -20,7 +20,7 @@ RenderSettings:
   m_FogDensity: 0.0001
   m_LinearFogStart: 50
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.21900772, g: 0.37313014, b: 0.5665381, a: 1}
+  m_AmbientSkyColor: {r: 0.4859663, g: 0.60616577, b: 0.75385153, a: 1}
   m_AmbientEquatorColor: {r: 0.5009191, g: 0.5727554, b: 0.625, a: 1}
   m_AmbientGroundColor: {r: 0, g: 0, b: 0, a: 1}
   m_AmbientIntensity: 1
@@ -5532,6 +5532,10 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 100228, guid: 92774b1fd6973774b834c19f524305a1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6400452, guid: 92774b1fd6973774b834c19f524305a1, type: 3}
     - {fileID: 6400358, guid: 92774b1fd6973774b834c19f524305a1, type: 3}
@@ -5877,59 +5881,59 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 415272, guid: 0409227cdad8af1419458c1c3b2a5ffb, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: 0.38215902
       objectReference: {fileID: 0}
     - target: {fileID: 415272, guid: 0409227cdad8af1419458c1c3b2a5ffb, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0.05233596
+      value: 0.048352122
       objectReference: {fileID: 0}
     - target: {fileID: 415272, guid: 0409227cdad8af1419458c1c3b2a5ffb, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0.020028107
       objectReference: {fileID: 0}
     - target: {fileID: 415272, guid: 0409227cdad8af1419458c1c3b2a5ffb, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 0.9986295
+      value: 0.9226134
       objectReference: {fileID: 0}
     - target: {fileID: 11437734, guid: 0409227cdad8af1419458c1c3b2a5ffb, type: 2}
       propertyPath: TIME_of_DAY_by_CURVE
-      value: 6
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 11437734, guid: 0409227cdad8af1419458c1c3b2a5ffb, type: 2}
       propertyPath: SkyDarkness
-      value: 1.5
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 11437734, guid: 0409227cdad8af1419458c1c3b2a5ffb, type: 2}
       propertyPath: StarsExtinction
-      value: 1.6297812
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 11437734, guid: 0409227cdad8af1419458c1c3b2a5ffb, type: 2}
       propertyPath: WispyCloudPosition
-      value: -6.386589
+      value: -6.5151434
       objectReference: {fileID: 0}
     - target: {fileID: 11437734, guid: 0409227cdad8af1419458c1c3b2a5ffb, type: 2}
       propertyPath: SunDirLightIntensity
-      value: 0.99982995
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11437734, guid: 0409227cdad8af1419458c1c3b2a5ffb, type: 2}
       propertyPath: MoonDirLightIntensity
-      value: 0.040925622
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11437734, guid: 0409227cdad8af1419458c1c3b2a5ffb, type: 2}
       propertyPath: SunFlareIntensity
-      value: 0.05000007
+      value: 0.16176683
       objectReference: {fileID: 0}
     - target: {fileID: 10865866, guid: 0409227cdad8af1419458c1c3b2a5ffb, type: 2}
       propertyPath: m_Intensity
-      value: 0.99982995
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 10827476, guid: 0409227cdad8af1419458c1c3b2a5ffb, type: 2}
       propertyPath: m_Intensity
-      value: 0.040925622
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 12313838, guid: 0409227cdad8af1419458c1c3b2a5ffb, type: 2}
       propertyPath: m_Brightness
-      value: 0.05000007
+      value: 0.16176683
       objectReference: {fileID: 0}
     - target: {fileID: 418482, guid: 0409227cdad8af1419458c1c3b2a5ffb, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -5965,19 +5969,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11437734, guid: 0409227cdad8af1419458c1c3b2a5ffb, type: 2}
       propertyPath: TIME_of_DAY
-      value: 6
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 11437734, guid: 0409227cdad8af1419458c1c3b2a5ffb, type: 2}
       propertyPath: RayCoeff
-      value: 2.1
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11437734, guid: 0409227cdad8af1419458c1c3b2a5ffb, type: 2}
       propertyPath: SunIntensity
-      value: 75
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 11437734, guid: 0409227cdad8af1419458c1c3b2a5ffb, type: 2}
       propertyPath: StarsIntensity
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 10865866, guid: 0409227cdad8af1419458c1c3b2a5ffb, type: 2}
       propertyPath: m_Shadows.m_Type
@@ -6070,6 +6074,10 @@ Prefab:
     - target: {fileID: 11437734, guid: 0409227cdad8af1419458c1c3b2a5ffb, type: 2}
       propertyPath: Longitude
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 10827476, guid: 0409227cdad8af1419458c1c3b2a5ffb, type: 2}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0409227cdad8af1419458c1c3b2a5ffb, type: 2}

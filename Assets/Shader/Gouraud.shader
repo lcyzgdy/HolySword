@@ -105,13 +105,13 @@
 			ENDCG
 		}
 
-		/*Pass
+		Pass
         {
             Name "ShadowCaster"
             Tags
             { 
                 "LightMode" = "ShadowCaster" 
-                //"IgnoreProjector" = "True"
+                "IgnoreProjector" = "True"
             }
 
             ZWrite On
@@ -131,7 +131,7 @@
                 #include "UnityStandardShadow.cginc"
 
             ENDCG
-        }*/
+        }
 
 		Pass
 		{

@@ -54,6 +54,34 @@
 			}
 			ENDCG
 		}
+
+		Pass
+        {
+            Name "ShadowCaster"
+            Tags
+            { 
+                "LightMode" = "ShadowCaster" 
+                "IgnoreProjector" = "True"
+            }
+
+            ZWrite On
+
+            CGPROGRAM
+                #pragma target 3.0
+				
+				#pragma shader_feature _ _ALPHATEST_ON _ALPHABLEND_ON _ALPHAPREMULTIPLY_ON
+				#pragma shader_feature _METALLICGLOSSMAP
+				#pragma shader_feature _PARALLAXMAP
+				#pragma multi_compile_instancing
+                #pragma multi_compile_shadowcaster
+
+                #pragma vertex vertShadowCaster
+                #pragma fragment fragShadowCaster
+
+                #include "UnityStandardShadow.cginc"
+
+            ENDCG
+        }
 	}
 	FallBack "Diffuse"
 }
