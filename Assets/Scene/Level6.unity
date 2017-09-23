@@ -15,12 +15,12 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 8
   m_Fog: 1
-  m_FogColor: {r: 0.6544118, g: 0.6544118, b: 0.6544118, a: 1}
+  m_FogColor: {r: 0.58823526, g: 0.58823526, b: 0.58823526, a: 1}
   m_FogMode: 1
   m_FogDensity: 0.0001
   m_LinearFogStart: 50
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.4859663, g: 0.60616577, b: 0.75385153, a: 1}
+  m_AmbientSkyColor: {r: 0.29909527, g: 0.44304082, b: 0.6227321, a: 1}
   m_AmbientEquatorColor: {r: 0.5009191, g: 0.5727554, b: 0.625, a: 1}
   m_AmbientGroundColor: {r: 0, g: 0, b: 0, a: 1}
   m_AmbientIntensity: 1
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18386838, g: 0.22901553, b: 0.30311254, a: 1}
+  m_IndirectSpecularColor: {r: NaN, g: NaN, b: NaN, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -57,7 +57,7 @@ LightmapSettings:
     serializedVersion: 9
     m_Resolution: 2
     m_BakeResolution: 40
-    m_TextureWidth: 1024
+    m_TextureWidth: 512
     m_TextureHeight: 1024
     m_AO: 0
     m_AOMaxDistance: 1
@@ -86,7 +86,7 @@ LightmapSettings:
     m_PVRFilteringAtrousColorSigma: 1
     m_PVRFilteringAtrousNormalSigma: 1
     m_PVRFilteringAtrousPositionSigma: 1
-  m_LightingDataAsset: {fileID: 112001248, guid: 45da9d59ce6b2864b9bf7ccd7ba8fe85,
+  m_LightingDataAsset: {fileID: 112001248, guid: 45b9557262a2ecf419d1e352ef055ba5,
     type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -2220,7 +2220,7 @@ Light:
   serializedVersion: 8
   m_Type: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.5
+  m_Intensity: 0.3
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -2285,7 +2285,7 @@ Light:
   serializedVersion: 8
   m_Type: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.5
+  m_Intensity: 0.3
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -2409,7 +2409,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1263350554
 Transform:
   m_ObjectHideFlags: 0
@@ -5881,27 +5881,27 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 415272, guid: 0409227cdad8af1419458c1c3b2a5ffb, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0.38215902
+      value: 0.11737634
       objectReference: {fileID: 0}
     - target: {fileID: 415272, guid: 0409227cdad8af1419458c1c3b2a5ffb, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0.048352122
+      value: 0.051973194
       objectReference: {fileID: 0}
     - target: {fileID: 415272, guid: 0409227cdad8af1419458c1c3b2a5ffb, type: 2}
       propertyPath: m_LocalRotation.z
-      value: -0.020028107
+      value: -0.006151434
       objectReference: {fileID: 0}
     - target: {fileID: 415272, guid: 0409227cdad8af1419458c1c3b2a5ffb, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 0.9226134
+      value: 0.9917075
       objectReference: {fileID: 0}
     - target: {fileID: 11437734, guid: 0409227cdad8af1419458c1c3b2a5ffb, type: 2}
       propertyPath: TIME_of_DAY_by_CURVE
-      value: 9
+      value: 6.9
       objectReference: {fileID: 0}
     - target: {fileID: 11437734, guid: 0409227cdad8af1419458c1c3b2a5ffb, type: 2}
       propertyPath: SkyDarkness
-      value: 0.5
+      value: 0.90673804
       objectReference: {fileID: 0}
     - target: {fileID: 11437734, guid: 0409227cdad8af1419458c1c3b2a5ffb, type: 2}
       propertyPath: StarsExtinction
@@ -5909,7 +5909,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11437734, guid: 0409227cdad8af1419458c1c3b2a5ffb, type: 2}
       propertyPath: WispyCloudPosition
-      value: -6.5151434
+      value: -30.223099
       objectReference: {fileID: 0}
     - target: {fileID: 11437734, guid: 0409227cdad8af1419458c1c3b2a5ffb, type: 2}
       propertyPath: SunDirLightIntensity
@@ -5921,7 +5921,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11437734, guid: 0409227cdad8af1419458c1c3b2a5ffb, type: 2}
       propertyPath: SunFlareIntensity
-      value: 0.16176683
+      value: 0.05000007
       objectReference: {fileID: 0}
     - target: {fileID: 10865866, guid: 0409227cdad8af1419458c1c3b2a5ffb, type: 2}
       propertyPath: m_Intensity
@@ -5933,7 +5933,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 12313838, guid: 0409227cdad8af1419458c1c3b2a5ffb, type: 2}
       propertyPath: m_Brightness
-      value: 0.16176683
+      value: 0.05000007
       objectReference: {fileID: 0}
     - target: {fileID: 418482, guid: 0409227cdad8af1419458c1c3b2a5ffb, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -5969,19 +5969,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11437734, guid: 0409227cdad8af1419458c1c3b2a5ffb, type: 2}
       propertyPath: TIME_of_DAY
-      value: 9
+      value: 6.9
       objectReference: {fileID: 0}
     - target: {fileID: 11437734, guid: 0409227cdad8af1419458c1c3b2a5ffb, type: 2}
       propertyPath: RayCoeff
-      value: 1
+      value: 1.2249482
       objectReference: {fileID: 0}
     - target: {fileID: 11437734, guid: 0409227cdad8af1419458c1c3b2a5ffb, type: 2}
       propertyPath: SunIntensity
-      value: 50
+      value: 50.50691
       objectReference: {fileID: 0}
     - target: {fileID: 11437734, guid: 0409227cdad8af1419458c1c3b2a5ffb, type: 2}
       propertyPath: StarsIntensity
-      value: 0
+      value: 2.6221724
       objectReference: {fileID: 0}
     - target: {fileID: 10865866, guid: 0409227cdad8af1419458c1c3b2a5ffb, type: 2}
       propertyPath: m_Shadows.m_Type
@@ -6079,6 +6079,26 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 10865866, guid: 0409227cdad8af1419458c1c3b2a5ffb, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11437734, guid: 0409227cdad8af1419458c1c3b2a5ffb, type: 2}
+      propertyPath: Umbra
+      value: 0.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 11437734, guid: 0409227cdad8af1419458c1c3b2a5ffb, type: 2}
+      propertyPath: UmbraSize
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 11437734, guid: 0409227cdad8af1419458c1c3b2a5ffb, type: 2}
+      propertyPath: StarsScintillation
+      value: 5.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 139234, guid: 0409227cdad8af1419458c1c3b2a5ffb, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0409227cdad8af1419458c1c3b2a5ffb, type: 2}
   m_IsPrefabParent: 0
@@ -6096,7 +6116,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1365440673
 Transform:
   m_ObjectHideFlags: 0
@@ -6291,7 +6311,7 @@ Light:
   serializedVersion: 8
   m_Type: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.5
+  m_Intensity: 0.3
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -6398,7 +6418,7 @@ Light:
   serializedVersion: 8
   m_Type: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.5
+  m_Intensity: 0.3
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10

@@ -49,7 +49,7 @@ Material:
     - _LerpNightSkyDistance: 0.25
     - _ProceduralCloudAltitude: 50
     - _ProceduralCloudDirection: 0.54
-    - _ProceduralCloudSpeed: -6.628812
+    - _ProceduralCloudSpeed: -30.235962
     - _SunSize: 281
     - _SundiskIntensity: 2
     - _WispyCloudDirection: 0
@@ -57,12 +57,12 @@ Material:
     m_Colors:
     - _Bright: {r: 0.25735292, g: 0.14449346, b: 0.08326123, a: 1}
     - _Darkness: {r: 0.5514706, g: 0.6102433, b: 1, a: 1}
-    - _GroundCloseColor: {r: 0.10654408, g: 0.17321135, b: 0.36275482, a: 1}
-    - _GroundFarColor: {r: 0.21959947, g: 0.30440354, b: 0.55783504, a: 1}
+    - _GroundCloseColor: {r: 0, g: 0.048319854, b: 0.19327942, a: 1}
+    - _GroundFarColor: {r: 0.13153261, g: 0.21649915, b: 0.46764073, a: 1}
     - _PenumbraColor: {r: 1, g: 0, b: 0, a: 1}
     - _SunCol: {r: 1, g: 1, b: 1, a: 1}
     - _SunColor: {r: 1, g: 0.09019608, b: 0, a: 1}
     - _SunCoronaColor: {r: 1, g: 0.68529415, b: 0.21323532, a: 1}
-    - _WispyBright: {r: 0.1294177, g: 0.072552346, b: 0.041178357, a: 1}
-    - _WispyColor: {r: 1, g: 0.86516225, b: 0.76216125, a: 1}
-    - _WispyDarkness: {r: 0.56250876, g: 0.680651, b: 1, a: 1}
+    - _WispyBright: {r: 0.22000456, g: 0.12333588, b: 0.070001446, a: 1}
+    - _WispyColor: {r: 1, g: 0.77078164, b: 0.5956843, a: 1}
+    - _WispyDarkness: {r: 0.55548096, g: 0.63005096, b: 1, a: 1}
