@@ -7,11 +7,16 @@
 	}
 	SubShader
 	{
-		Tags { "RenderType"="Opaque" }
+		Tags
+		{
+			"RenderType"="Opaque"
+			"LightMode" = "Always"
+		}
 		LOD 100
 
 		Pass
 		{
+			//Cull Front
 			CGPROGRAM
 			#pragma vertex vert
 			#pragma fragment frag
@@ -58,4 +63,5 @@
 			ENDCG
 		}
 	}
+	FallBack "Diffuse"
 }
