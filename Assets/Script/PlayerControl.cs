@@ -70,12 +70,12 @@ public class PlayerControl : MonoBehaviour
 			direction /= 3f;
 			direction *= runSpeed;
 			direction.y = vSpeed;
-			rigidbody.velocity = direction;// new Vector3(0, vSpeed, 0);
+			velocity = direction;// new Vector3(0, vSpeed, 0);
 			isRunning = true;
 		}
 		else
 		{
-			rigidbody.velocity = new Vector3(0, vSpeed, 0);
+			velocity = new Vector3(0, vSpeed, 0);
 			isRunning = false;
 		}
 		if (canMove && Input.GetMouseButtonDown(0) && isPrepared)
@@ -101,12 +101,19 @@ public class PlayerControl : MonoBehaviour
 			//}
 		}
 
+		if (rigidbody.isKinematic)
+		{
+			rigidbody.MovePosition(rigidbody.position + velocity * Time.deltaTime);
+		}
+		else
+		{
+			rigidbody.velocity = velocity;
+		}
+
 		if (isAttacking)
 		{
 			NormalAttack(sword.position - hand.position);
 		}
-
-		//print(canMove);
 	}
 
 	private void NormalAttack(Vector3 direction)
@@ -126,5 +133,10 @@ public class PlayerControl : MonoBehaviour
 	public void HideSword()
 	{
 		hand.parent.GetComponent<MeshRenderer>().enabled = false;
+	}
+
+	private bool IsOnGround()
+	{
+		return true;
 	}
 }

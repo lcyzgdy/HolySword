@@ -1,6 +1,4 @@
-﻿// Unity built-in shader source. Copyright (c) 2016 Unity Technologies. MIT license (see license.txt)
-
-Shader "Custom/MyStandard"
+﻿Shader "Custom/MyStandard"
 {
 	Properties
 	{
@@ -53,7 +51,12 @@ Shader "Custom/MyStandard"
 
 	SubShader
 	{
-		Tags { "RenderType"="Opaque" "PerformanceChecks"="False" }
+		Tags 
+		{
+			"RenderType" = "Opaque"
+			"PerformanceChecks" = "False"
+			"CanUseSpriteAtlas" = "True"
+		}
 		LOD 300
 		Cull Off
 
@@ -62,9 +65,13 @@ Shader "Custom/MyStandard"
 		Pass
 		{
 			Name "FORWARD" 
-			Tags { "LightMode" = "ForwardBase" }
+			Tags 
+			{
+				"LightMode" = "ForwardBase" 
+			}
 
-			Blend [_SrcBlend] [_DstBlend]
+			//Blend [_SrcBlend] [_DstBlend]
+			Blend SrcAlpha OneMinusSrcAlpha
 			ZWrite [_ZWrite]
 			//ZTest Always
 			//ZWrite Always
@@ -102,6 +109,7 @@ Shader "Custom/MyStandard"
 			Name "FORWARD_DELTA"
 			Tags { "LightMode" = "ForwardAdd" }
 			Blend [_SrcBlend] One
+			//Blend SrcAlpha OneMinusSrcAlpha
 			Fog { Color (0,0,0,0) } // in additive pass fog should be black
 			ZWrite Off
 			ZTest LEqual
@@ -110,7 +118,6 @@ Shader "Custom/MyStandard"
 			#pragma target 3.0
 
 			// -------------------------------------
-
 
 			#pragma shader_feature _NORMALMAP
 			#pragma shader_feature _ _ALPHATEST_ON _ALPHABLEND_ON _ALPHAPREMULTIPLY_ON
@@ -131,11 +138,16 @@ Shader "Custom/MyStandard"
 		}
 		// ------------------------------------------------------------------
 		//  Shadow rendering pass
-		Pass {
+		Pass
+		{
 			Name "ShadowCaster"
-			Tags { "LightMode" = "ShadowCaster" }
+			Tags
+			{
+				"LightMode" = "ShadowCaster"
+			}
 
-			ZWrite On ZTest LEqual
+			ZWrite On
+			ZTest LEqual
 
 			CGPROGRAM
 			#pragma target 3.0
@@ -216,5 +228,5 @@ Shader "Custom/MyStandard"
 	}
 
 	FallBack "VertexLit"
-	CustomEditor "StandardShaderGUI"
+	CustomEditor "MyStandardShaderGUI"
 }
