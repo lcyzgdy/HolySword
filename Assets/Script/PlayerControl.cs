@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityStandardAssets.CrossPlatformInput;
 
+//[RequireComponent(typeof(PlayerCharacter))]
 public class PlayerControl : MonoBehaviour
 {
 	public float runSpeed = 10f;
@@ -12,10 +11,10 @@ public class PlayerControl : MonoBehaviour
 	private new Rigidbody rigidbody;
 	private bool isAttacking;
 	private float cancelTime;
-	private PlayerAnimControl animControl;
 	[SerializeField] private Transform hand;
 	[SerializeField] private Transform sword;
-	[SerializeField] private LayerMask layerMask;
+	[SerializeField] private LayerMask whatIsAttackObject;
+	[SerializeField] private LayerMask whatIsGround;
 	private bool isPrepared;
 	private bool canMove;
 	private bool isRunning;
@@ -37,12 +36,12 @@ public class PlayerControl : MonoBehaviour
 	void Start()
 	{
 		rigidbody = GetComponent<Rigidbody>();
-		animControl = GetComponent<PlayerAnimControl>();
 		isAttacking = false;
 		isPrepared = true;
 		canMove = true;
 		isRunning = false;
 		cancelTime = 0.5f;
+
 	}
 
 	// Update is called once per frame
@@ -57,7 +56,16 @@ public class PlayerControl : MonoBehaviour
 		cancelTime -= Time.deltaTime;
 		isRunning = false;
 
-		if (cancelTime <= 0f)
+		if (IsOnGround())
+		{
+			rigidbody.useGravity = false;
+		}
+		else
+		{
+			rigidbody.useGravity = true;
+		}
+
+		if (cancelTime <= 0)
 		{
 			isAttacking = false;
 		}
@@ -119,7 +127,7 @@ public class PlayerControl : MonoBehaviour
 	private void NormalAttack(Vector3 direction)
 	{
 		Ray ray = new Ray(hand.position, direction);
-		foreach (var item in Physics.RaycastAll(ray, direction.sqrMagnitude * 1.2f, layerMask))
+		foreach (var item in Physics.RaycastAll(ray, direction.sqrMagnitude * 1.2f, whatIsAttackObject))
 		{
 			print(item.transform.name);
 		}
@@ -137,6 +145,17 @@ public class PlayerControl : MonoBehaviour
 
 	private bool IsOnGround()
 	{
-		return true;
+		RaycastHit hitInfo;
+		Physics.Raycast(transform.position + Vector3.up * 0.1f, Vector3.down, out hitInfo, 0.2f, whatIsGround);
+		Debug.DrawRay(transform.position + Vector3.up * 0.1f, Vector3.down * 0.2f, Color.yellow);
+		if (hitInfo.collider != null)
+		{
+			print(hitInfo.collider.transform.name);
+			return true;
+		}
+		else
+		{
+			return false;
+		}
 	}
 }
